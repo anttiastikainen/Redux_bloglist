@@ -38,5 +38,6 @@ app.use('/api/blogs', middleware.tokenExtractor, middleware.userExtractor, blogs
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
+app.use(express.static('dist'))
 
 module.exports = app
